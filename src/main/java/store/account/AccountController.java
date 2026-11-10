@@ -42,4 +42,10 @@ public interface AccountController {
         @RequestBody AccountIn in
     );
 
+    @PostMapping("/accounts/{id}/roles")
+    public ResponseEntity<AccountOut> updateRole(
+        @PathVariable String id,
+        @RequestBody AccountRoleIn in
+    );
+
 }
